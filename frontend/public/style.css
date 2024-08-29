@@ -1,0 +1,317 @@
+/* Non-Class styles */
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    background-color: #f0f0f0; /* Set your preferred background color */
+    background-image: url('https://i.pinimg.com/originals/07/f1/76/07f1767076dfb8120434ccf698ca74f5.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-attachment: fixed; /* Fix the background image */
+    font-family: Arial, sans-serif; /* Optional: Set a default font */
+}
+
+h1 { color: #333; /* Set your preferred text color */ }
+
+h2 { color: #444; /* Set your preferred text color */ }
+
+p { color: #666; /* Set your preferred text color */ }
+
+/* Class specific styles */
+.main {
+    max-width: 80%; /* Set a maximum width for the content */
+    height: 100%;
+    margin: 0 auto; /* Center the content horizontally */
+    background-color: #f0f0f0; /* Set your preferred background color */
+    /* background-color: rgba(255, 255, 255); Optional: Add a semi-transparent white background to the content */
+    padding: 20px; /* Optional: Add padding to the content */
+    text-align: center;
+    border-radius: 15px;
+}
+
+.galleryButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    color: #fff; /* Text color */
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+} 
+  
+.galleryButton:hover {
+    background-color: #2980b9;
+}
+
+.base-container {
+    width: 95%;
+    margin: 50px auto; /* Center the container on the page */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Small shadow */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.active-container{
+    background-color: #e0f5e0; /* Container background color */
+}
+
+.deactive-container {
+    background-color: #f5c4bf; /* Container background color */
+}
+
+/* List container */
+    .list-container {
+        width: 100%;
+        margin: auto;
+    }
+
+    /* List Header Classes */
+        .list-header-container {
+            height: 50px;
+            position: relative;
+            text-align: left;
+            border-radius: 5px; /* Rounded corners on the bottom */
+            width: 100%;
+            font-size: 18px;
+            margin: auto;
+            color: #333; /* Heading text color */
+            /* margin: 10px; */
+        }
+        
+        .active-list-header-container {
+            background: #2ecc71;
+        }
+
+        .deactive-list-header-container {
+            background: #e74c3c;
+        }
+        
+        .list-heading-item {
+            top: 15px; /* Adjust top position as needed */
+            left: 50px; /* Adjust left position as needed */
+            position: absolute; 
+            text-decoration: underline; /* Add underline to the text */
+        }
+
+        .list-heading-lowest {
+            top: 15px; /* Adjust top position as needed */
+            left: 40px; /* Adjust left position as needed */
+            padding-left: 20%;
+            position: absolute;
+            text-decoration: underline; /* Add underline to the text */
+        }
+
+        .list-heading-highest {
+            top: 15px; /* Adjust top position as needed */
+            left: 40px; /* Adjust left position as needed */
+            margin-left: 40%;
+            position: absolute;
+            text-decoration: underline; /* Add underline to the text */
+        }
+
+    /* List Item Classes */
+        .list-row {
+            height: 50px;
+            margin: 10px;
+            position: relative;
+            text-align: left;
+            border: 1px solid #ccc; /* Border for each row */
+            border-radius: 20px; /* Rounded corners on the bottom */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Small shadow */
+            background-color: #f0f0f0;
+            color: #333; /* Text color for list items */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .list-text-item {
+            position: absolute; 
+            top: 15px; /* Adjust top position as needed */
+            left: 40px; /* Adjust left position as needed */
+        }
+
+        .list-text-lowest {
+            padding-left: 20%;
+        }
+
+        .list-text-highest {
+            margin-left: 40%;
+        }
+
+        .list-base-button {
+            height: 40px;
+            border-radius: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .list-buy-button {
+            width: 50px;
+            margin: 5px 5px 5px auto;
+            background-color: #2ecc71;
+        }
+        
+        .list-buy-button:hover {
+            background-color: #27ae60; /* Darker green on hover */
+        }
+
+        .list-edit-button {
+            width: 50px;
+            margin: 5px;
+            background-color: #3498db;
+        }
+
+        .list-edit-button:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
+        .list-switch-button {
+            width: 90px;
+            margin: 5px;
+            background-color: #f4d03f;
+        }
+
+        .list-switch-button:hover {
+            background-color: #f1c40f; /* Darker yellow on hover */
+        }
+
+        .list-delete-button {
+            width: 60px;
+            margin: 5px;
+            background-color: #e74c3c;
+        }
+
+        .list-delete-button:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
+
+
+/* Code taken from: https://www.w3schools.com/howto/howto_css_modals.asp */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s;
+    }
+  
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #5cb85c;
+      color: white;
+    }
+  
+    .modal-body {padding: 2px 16px;}
+  
+    .modal-footer {
+      padding: 20px 16px;
+      background-color: #5cb85c;
+      color: white;
+    }
+  
+  /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+  /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+    }
+  
+    @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+  
+  /* Form and input fields style */ 
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .form-row input {
+    flex: 1;
+    margin-right: 8px;
+  }
+  
+  input[type="submit"] {
+    margin-bottom: 4px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }

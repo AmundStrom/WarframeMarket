@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Warframe Market Bot</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="../src/script.js" defer></script>
+</head>
+
+<body> <div class="main">
+
+    <h1>Warframe Market Surveillance Bot</h1>
+    <p>
+        Take advantage of the ignorant and ill-informed and use the Automated Bargain Hunter&trade; to scan the 
+        market for the best deals currently available.
+    </p>
+
+    <button class="galleryButton" id="newItemOpen">New Item</button>
+    <button class="galleryButton" id="playButton">Allow Music</button>
+
+    <!-- New Item Modal -->
+    <div id="newItemModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="newItemClose" class="close">&times;</span>
+                <h2>Insert New Item</h2>
+            </div>
+            <div class="modal-body">
+                <form id="newItemForm">
+                    <label for="item_url">Item URL:</label>
+                    <input type="url" name="item_url" id="item_url" placeholder="URL" required>
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="low_price">Lowest Price:</label>
+                            <input type="number" name="low_price" id="low_price" placeholder="1" required>
+                        </div>
+                        <div>
+                            <label for="high_price">Highest Price:</label>
+                            <input type="number" name="high_price" id="high_price" placeholder="100" required>
+                        </div>
+                        <div>
+                            <label for="status">Status:</label>
+                            <select id="status" name="status">
+                                <option value="active">Active</option>
+                                <option value="deactive">Deactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content inside the ACTIVE container -->
+    <div class="base-container active-container">
+        <h1>Active Items</h1>
+
+        <div class="list-container" id="list-active-container">
+            <!-- Header container -->
+            <div class="list-header-container active-list-header-container">
+                <div class="list-heading-item">
+                    <span>Item</span>
+                </div>
+                <div class="list-heading-lowest">
+                    <span>Lowest Price</span>
+                </div>
+                <div class="list-heading-highest">
+                    <span>Highest Price</span>
+                </div>
+            </div>
+            
+            <!-- Item container -->
+            <!-- Items will be added dynamic -->
+        </div>
+    </div>
+
+    <!-- Content inside the DEACTIVE container -->
+    <div class="base-container deactive-container">
+        <h1>Deactive Items</h1>
+
+        <!-- Header container -->
+        <div class="list-container" id="list-deactive-container">
+            <div class="list-header-container deactive-list-header-container">
+                <div class="list-heading-item">
+                    <span>Item</span>
+                </div>
+                <div class="list-heading-lowest">
+                    <span>Lowest Price</span>
+                </div>
+                <div class="list-heading-highest">
+                    <span>Highest Price</span>
+                </div>
+            </div>
+            
+            <!-- Item container -->
+            <!-- Items will be added dynamic -->
+        </div>
+    </div>
+
+</div> </body> 
+</html>
